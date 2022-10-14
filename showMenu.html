@@ -41,7 +41,7 @@
         }
 
         div.gallery {
-            margin: 15px;
+            margin: 17px;
             border: 3px solid #ccc;
             float: left;
             width: 270px;
@@ -67,6 +67,7 @@
         #picCard {
             margin-right: 30px;
             margin-left: 30px;
+          
         }
 
         #top {
@@ -96,6 +97,10 @@
         #myBtn:hover {
             background-color: rgb(255, 153, 70);
         }
+
+        .menuPicLoop{
+            margin: 20px;;
+        }
     </style>
 
 </head>
@@ -103,11 +108,11 @@
 <body>
     <div class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-            <a href="/loginAlready" class="w3-bar-item w3-button">NAPASSANIEN RESTAURANT</a>
+            <a href="MainRest2.html" class="w3-bar-item w3-button">NAPASSANIEN RESTAURANT</a>
             <div class="w3-right w3-hide-small">
-                <a href="/loginAlready#ABS" class="w3-bar-item w3-button">ABOUT US</a>
-                <a href="/showMenu" class="w3-bar-item w3-button">ORDER NOW</a>
-                <a href="http://10.4.53.25:7712/" class="w3-bar-item w3-button" id="lo">LOG OUT</a>
+                <a href="MainRest2.html#ABS" class="w3-bar-item w3-button">ABOUT US</a>
+                <a href="/showMenu.html" class="w3-bar-item w3-button">ORDER NOW</a>
+                <a href="index.html" class="w3-bar-item w3-button" id="lo">LOG OUT</a>
 
             </div>
         </div>
@@ -128,7 +133,7 @@
             <b>DATE</b> <input type="date" name="date" id="">
             <br><b>CUSTOMER ID</b><input type="number" name="cID" id="">
     </div>
-    <table id="menu">
+    <div id="menu" class="menuPicLoop">
         <!-- <tr>
             <td>
                 <% let M=0 %>
@@ -147,7 +152,7 @@
         </td>
 
         </tr>
-    </table>
+    </div>
     <div id="sub">
         <input type="hidden" name="maxLoop" value="<%=M %>">
         <input type="submit" value="Click to Order" id="myBtn" onclick="selBrances();">
