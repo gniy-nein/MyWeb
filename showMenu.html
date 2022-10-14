@@ -17,7 +17,8 @@
             font-size: 20px;
         }
 
-        input,select {
+        input,
+        select {
             width: 100%;
             margin-bottom: 20px;
             padding: 12px;
@@ -89,14 +90,14 @@
             padding: 10px;
             border-radius: 10px;
             width: 10cm;
-            border: 5px dashed rgb(174, 157, 59) ;
+            border: 5px dashed rgb(174, 157, 59);
         }
 
         #myBtn:hover {
             background-color: rgb(255, 153, 70);
         }
     </style>
-     
+
 </head>
 
 <body>
@@ -127,7 +128,7 @@
             <b>DATE</b> <input type="date" name="date" id="">
             <br><b>CUSTOMER ID</b><input type="number" name="cID" id="">
     </div>
-    <table id="menu" >
+    <table id="menu">
         <!-- <tr>
             <td>
                 <% let M=0 %>
@@ -143,26 +144,23 @@
                             </div>
                         </div> 
                     <% } %>-->
-            </td>
-            
-        </tr> 
+        </td>
+
+        </tr>
     </table>
     <div id="sub">
         <input type="hidden" name="maxLoop" value="<%=M %>">
-        <input type="submit" value="Click to Order" id="myBtn"">
+        <input type="submit" value="Click to Order" id="myBtn" onclick="selBrances();">
     </div>
     </form>
    
     <script>
-        
+
         //Get the button
-        var mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        var mybutton = document.getElementById("myBtn"); // When the user scrolls down 20px from the top of thedocument, show the button 
+        window.onscroll = function () { scrollFunction() }; function scrollFunction() {
+            if
+                (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
@@ -174,8 +172,20 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+        function selBrances() {
+            var branch = document.getElementById("branch").value;
+            if (branch == 1) {
+                document.getElementById("form").setAttribute("action", "selectTable.html");
+            } if (branch == 2) {
+                document.getElementById("form").setAttribute("action", "selectTable2.html");
+            } if (branch == 3) {
+                document.getElementById("form").setAttribute("action", "selectTable3.html");
+            } 
+
+            console.log(branch);
+        }
     </script>
-    </center>
+        </center>
 </body>
 
 </html>

@@ -121,7 +121,7 @@
     <button class="tablink" onclick="openPage('F1', this, '#fffec5')" id="defaultOpen">FLOOR 1 </button>
     <div class="row">
         <div class="container">
-            <form action="/selectTable" method="get">
+            <form action="MainRest2.html" method="get">
                 <div id="F1" class="tabcontent">
                     <h2 id="label">SELECT TABLE FLOOR 1</h2>
                     <div class="radiobtn">
@@ -164,12 +164,15 @@
                         <label for="t8">Table 8 : 5 SEATS</label>
                     </div>
                 </div>
-                <br><input type="submit" class="button" value="Select Table">
+                <br><input type="submit" class="button" value="Select Table" onclick="prompt();">
             </form>
         </div>
     </div>
 
     <script>
+         function prompt(){
+      alert("Reservation success!!")
+    }
         function openPage(pageName, elmnt, color) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
